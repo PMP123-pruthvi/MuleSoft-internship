@@ -1,0 +1,39 @@
+/* COMMAND TO CREATE DATABASE */
+sqlite3 movie.db;
+
+/* COMMAND TO CREATE TABLE */
+CREATE TABLE [movie_details] (
+    [name] NVARCHAR(50) NOT NULL,
+    [actor] NVARCHAR(50) NOT NULL,
+    [actress] NVARCHAR(50) NOT NULL,
+    [director] NVARCHAR(50) NOT NULL,
+    [year] INTEGER NOT NULL );
+    
+/* COMMAND TO INSERT VALUES INTO TABLE */
+INSERT INTO movie_details(name,actor,actress,director,year)
+    VALUES
+    ("SAHOO","PRABHAS","SHRADHA","SUJEETH",2019);
+    
+INSERT INTO movie_details(name,actor,actress,director,year)
+    VALUES
+    ("EGA","NANI","SAMANTHA","RAJMOULI",2012);
+    
+INSERT INTO movie_details(name,actor,actress,director,year)
+    VALUES
+    ("HYPER","RAM","RASHI","SANTHOSH",2016);
+    
+INSERT INTO movie_details(name,actor,actress,director,year)
+    VALUES
+    ("SPYDER","MAHESH BABU","RAKUL","MURGA",2017);
+    
+INSERT INTO movie_details(name,actor,actress,director,year)
+    VALUES
+    ("PUSHPA","ALU ARJUN","RASHMIKA MANDANA","SUKUMAR",2022);
+    
+/* QUERY1 - to display movie details (name, actor, actress, director, year of release) */
+SELECT * FROM movie_details;
+
+/* QUERY2 - select movies based on the actor's name. */
+SELECT name FROM movie_details
+   WHERE actor="PRABHAS";
+    
